@@ -39,7 +39,7 @@ wss.on('connection', (ws) => {
                 },
                 body: JSON.stringify({
                     text: aiResponse,
-                    model_id: "eleven_turbo_v2_5", 
+                    model_id: "eleven_multilingual_v2",
                     voice_settings: { stability: 0.5, similarity_boost: 0.8 }
                 })
             });
@@ -60,4 +60,4 @@ wss.on('connection', (ws) => {
 
 server.listen(3000, '0.0.0.0', () => {
     console.log('Сервер-Попугай запущен! Порт 3000');
-});
+})
